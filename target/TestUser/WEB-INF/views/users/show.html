@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <link rel="stylesheet" type= "text/css"  th:href="@{/resources/show.css}">
+</head>
+<body>
+<div class="main" align=”center”>
+
+    <div class="user_table" >
+        <table>
+            <caption>User</caption>
+    <tr>
+        <td class="title_column">id</td>
+        <td th:text="${user.getId()}">id</td>
+    </tr>
+    <tr>
+        <td class="title_column">Lastname</td>
+        <td th:text="${user.getLastname()}">lastname</td>
+    </tr>
+    <tr>
+        <td class="title_column">Firstname</td>
+        <td th:text="${user.getFirstname()}">firstname</td>
+    </tr>
+    <tr>
+        <td class="title_column">e-mail</td>
+        <td th:text="${user.getEmail()}">email</td>
+    </tr>
+    <tr>
+        <td class="title_column">Year of birth</td>
+        <td th:text="${user.getYearOfBirth()}">year</td>
+    </tr>
+        </table>
+    </div>
+<div class="wrapper_button">
+    <div class="action"> <a th:href="@{/users/edit/{id} (id=${user.getId()})}" class="button_user">Edit</a> </div>
+    <div class="action"> <a th:href="@{/users/delete/{id} (id=${user.getId()})}" class="button_user button_del">Delete</a></div>
+</div>
+</div>
+
+</body>
+</html>

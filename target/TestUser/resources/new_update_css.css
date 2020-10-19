@@ -1,0 +1,42 @@
+body{
+    background-size: 100%;
+    background: url("22.jpg") no-repeat fixed center;
+    display: flex;
+    justify-content: center;
+}
+.update{
+    margin-top: 95px;
+    font: 16px "Helvetica", sans-serif;
+}
+
+td{
+    padding: 5px;
+}
+input{
+    padding: 3px;
+    font: 16px "Helvetica", sans-serif;
+    border: 1px solid #a9b2bb;
+    border-radius: 4px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #1e729a;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input:active,
+input:focus,
+input:focus:active {
+    background-image: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+ form{
+     background-color: rgba(255,255,255,0.7);
+     padding: 25px;
+     border-radius: 5px;
+ }

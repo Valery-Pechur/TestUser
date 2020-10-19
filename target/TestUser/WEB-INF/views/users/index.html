@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link rel="stylesheet" type= "text/css"  th:href="@{/resources/css_index_h.css}">
+</head>
+<body>
+
+<div class="main" align=”center”>
+
+ <div class="user_table" >
+          <table>
+        <caption>Users</caption>
+              <tr>
+             <th>id</th>
+             <th>Lastname</th>
+             <th>Firstname</th>
+             <th>E-mail</th>
+             <th>Year of birth</th>
+             <th>Action</th>
+         </tr>
+         <tr th:each ="user:${users}">
+             <td class="id">
+                 <a th:href="@{/users/{id} (id=${user.getId()})}" th:text="${user.getId()}" class="button_id">id</a>
+             </td>
+             <td th:text="${user.getLastname()}">lastname</td>
+             <td th:text="${user.getFirstname()}">firstname</td>
+             <td th:text="${user.getEmail()}">email</td>
+             <td th:text="${user.getYearOfBirth()}">year</td>
+             <td >
+                 <div class="action"> <a th:href="@{/users/edit/{id} (id=${user.getId()})}" class="button_table">Edit</a>
+                     &nbsp;&nbsp;&nbsp;
+                 <a th:href="@{/users/delete/{id} (id=${user.getId()})}" class="button_table button_del">Delete</a></div>
+             </td>
+
+         </tr>
+
+     </table>
+
+ </div>
+    <div class="create_user"> <a th:href="@{/users/new}" class="button">Create new user</a></div>
+</div>
+
+</body>
+<footer>
+
+</footer>
+</html>
